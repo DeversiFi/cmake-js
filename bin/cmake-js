@@ -162,6 +162,11 @@ var yargs = require("yargs")
           alias: "out",
           describe: "Specify the output directory to compile to, default is projectRoot/build",
           type: "string"
+        },
+        "dont-download-deps": {
+          demand: false,
+          describe: "stops cmake-js from downloading node headers and libs",
+          type: "boolean"
         }
     });
 var argv = yargs.argv;
@@ -212,7 +217,8 @@ var options = {
     arch: argv.a,
     cMakeOptions: customOptions,
     silent: argv.i,
-    out: argv.O
+    out: argv.O,
+    dontDownloadDeps: argv["dont-download-deps"]
 };
 
 log.verbose("CON", "options:");
