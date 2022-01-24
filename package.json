@@ -27,6 +27,7 @@
     "node": ">= 10.0.0"
   },
   "dependencies": {
+    "bluebird": "^3.4.7",
     "debug": "^4",
     "fs-extra": "^5.0.0",
     "is-iojs": "^1.0.1",
